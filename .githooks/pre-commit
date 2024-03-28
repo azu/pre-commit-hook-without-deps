@@ -4,7 +4,7 @@ FILES=$(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g')
 [ -z "$FILES" ] && exit 0
 
 # If match FILES with *.js,jsx,ts,tsx,css, apply prettier
-echo "$FILES" | grep -E ".*\.(js|jsx|ts|tsx|css)$" | xargs npm exec prettier --write
+echo "$FILES" | grep -E ".*\.(js|jsx|ts|tsx|css)$" | xargs npm exec prettier -- --write
 # If match FILES with *.go, apply gofmt
 echo "$FILES" | grep -E ".*\.go$" | xargs gofmt -w
 
