@@ -13,3 +13,4 @@ echo "$FILES" | grep -E ".*\.go$" | xargs gofmt -w
 echo "$FILES" | xargs git add
 
 exit 0
+
