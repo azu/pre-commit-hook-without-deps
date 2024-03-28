@@ -1,0 +1,14 @@
+{
+  "name": "pre-commit-hook-without-deps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "git config --local core.hooksPath .githooks"
+  },
+  "author": "azu",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
